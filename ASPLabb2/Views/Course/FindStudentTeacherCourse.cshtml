@@ -1,0 +1,16 @@
+﻿@{
+	ViewData["Title"] = "FindStudentTeacherCourse";
+}
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="FindStudentTeacherCourse">
+			<div class="form-group">
+				<label class="control-label">Select course</label>
+				<select class="form-control" name="id" asp-items="ViewBag.CourseId"></select>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="FindStudentTeacherCourse" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>

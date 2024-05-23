@@ -1,0 +1,26 @@
+﻿@model ASPLabb2.Models.UpdateStudentTeacherModel;
+
+@{
+	ViewData["Title"] = "ChangeTeacher";
+}
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="ChangeTeacherPost">
+			<div class="form-group">
+				<label class="control-label" asp-for="SelectNewTeacherID">Select teacher</label>
+				<select class="form-control" asp-for="SelectNewTeacherID" asp-items="@Model.TeacherList"></select>
+				@* <input hidden asp-for="Student" value="@Model.Student"/> *@
+				<input hidden asp-for="SelectStudentID" value="@Model.SelectStudentID"/>
+				<input hidden asp-for="Course" value="@Model.Course" />
+				<input hidden asp-for="SelectCourseID" value="@Model.SelectCourseID" />
+				<input hidden asp-for="OldTeacherID" value="@Model.OldTeacherID" />
+				<input hidden asp-for="OldTeacher" value="@Model.OldTeacher" />
+
+
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Next</button>
+			</div>
+		</form>
+	</div>
+</div>

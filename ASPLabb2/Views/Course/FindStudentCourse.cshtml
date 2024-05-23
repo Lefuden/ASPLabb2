@@ -1,0 +1,22 @@
+﻿@model ASPLabb2.Models.UpdateStudentTeacherModel;
+
+@{
+	ViewData["Title"] = "FindStudentCourse";
+}
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="FindStudentCoursePost">
+			<div class="form-group">
+				<label class="control-label" asp-for="SelectCourseID">Select course</label>
+				<select class="form-control" asp-for="SelectCourseID" asp-items="@Model.CourseList"></select>
+				<input hidden asp-for="Student" value="@Model.Student"/>
+				<input hidden asp-for="SelectStudentID" value="@Model.SelectStudentID"/>
+
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Next</button>
+			</div>
+		</form>
+	</div>
+</div>

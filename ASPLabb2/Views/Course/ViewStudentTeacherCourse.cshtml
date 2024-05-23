@@ -1,0 +1,38 @@
+﻿@model ASPLabb2.Models.ViewStudentTeacherCourseModel
+@{
+	ViewData["Title"] = "Results";
+}
+<h2>Selected course with students and teachers</h2>
+<dl class="row">
+	<dt class="col-sm-2">
+		@Html.DisplayNameFor(model => model.CourseName)
+	</dt>
+	<dd class="col-sm-10">
+		@Html.DisplayFor(model => model.CourseName)
+	</dd>
+	<hr />
+
+	<dt class="col-sm-2">
+		@Html.DisplayNameFor(model => model.Teachers)
+	</dt>
+	<dd class="col-sm-10"/>
+	@foreach (var teacher in Model.Teachers)
+	{
+		@* <dt class="col-sm-2"/> *@
+		<dd class="col-sm-10">
+			@Html.DisplayFor(modelItem => teacher.Name)
+		</dd>
+	}
+	<hr />
+	<dt>
+		@Html.DisplayNameFor(model => model.Students)
+	</dt>
+	<dd class="col-sm-10"/>
+	@foreach (var student in Model.Students)
+	{
+		@* <dt class="col-sm-2"/> *@
+		<dd class="col-sm-10">
+			@Html.DisplayFor(modelItem => student.Name)
+		</dd>
+	}
+</dl>

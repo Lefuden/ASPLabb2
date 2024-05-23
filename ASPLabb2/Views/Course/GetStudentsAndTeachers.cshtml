@@ -1,0 +1,25 @@
+﻿@model List<ASPLabb2.Models.ViewStudentTeacherModel>
+@{
+	ViewData["Title"] = "Students and teachers";
+}
+<h2>List of all students and their teachers</h2>
+<hr />
+
+<dl class="row">
+	@foreach (var student in Model)
+	{
+		<dt>
+			<h4>@student.Student.Name</h4>
+		</dt>
+		
+		<ul>
+			<dd/>
+			@foreach (var teacher in student.Teachers)
+			{
+				<li style="list-style: none;">@teacher.Name</li>
+			}
+		</ul>
+		<hr />
+
+	}
+</dl>

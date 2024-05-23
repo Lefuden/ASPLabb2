@@ -1,0 +1,17 @@
+﻿@model ASPLabb2.Models.UpdateStudentTeacherModel
+@{
+	ViewData["Title"] = "FindStudent";
+}
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="FindStudentPost">
+			<div class="form-group">
+				<label class="control-label" asp-for="SelectStudentID">Select student</label>
+				<select class="form-control" asp-for="SelectStudentID" asp-items="ViewBag.StudentId"></select>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Next</button>
+			</div>
+		</form>
+	</div>
+</div>
